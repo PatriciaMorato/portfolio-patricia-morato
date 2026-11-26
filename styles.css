@@ -67,41 +67,31 @@ a { color: inherit; }
 
 .ticker-track {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 30px;
   width: max-content;
-  min-width: 200%;
   animation: ticker 40s linear infinite;
-  font: 700 11px var(--mono);
-  letter-spacing: 3px;
+  will-change: transform;
+}
+
+.ticker-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 30px;
+  padding-right: 30px;
   white-space: nowrap;
 }
 
-.ticker-track b {
-  color: var(--purple);
-  font-size: 17px;
-}
-
-.ticker-track span {
+.ticker-group span {
   font: 700 10px var(--display);
   letter-spacing: 3px;
 }
 
-@keyframes ticker {
-  to {
-    transform: translateX(-50%);
-  }
-}
 .ticker-group b {
   color: var(--purple);
   font-size: 17px;
 }
 
 @keyframes ticker {
-  from {
-    transform: translateX(0);
-  }
   to {
     transform: translateX(-50%);
   }
