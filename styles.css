@@ -136,7 +136,20 @@ h2 em { color: var(--pink); font-style: normal; }
 .back-top:hover { color: var(--lime); }
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease,transform .7s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
-@media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  *:not(.ticker-track),
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
 @media (max-width: 760px) {
   .site-header { height: 68px; padding: 0 6vw; }
   .menu-toggle { display: flex; flex-direction: column; gap: 6px; border: 0; background: none; padding: 10px; cursor: pointer; }
