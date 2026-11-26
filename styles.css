@@ -54,19 +54,41 @@ a { color: inherit; }
 .hero-stamp b { font: 700 35px var(--display); letter-spacing: -4px; color: var(--white); }
 .hero-index { position: absolute; bottom: 24px; right: 7vw; font-size: 10px; letter-spacing: 2px; color: var(--lime); }
 .hero-index span { color: #746c7b; }
-.ticker { overflow: hidden; background: var(--purple); color: white; padding: 13px 0; transform: rotate(-1deg) scale(1.02); }
+
+/* CINTA INFINITA */
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  background: var(--lime);
+  color: #101015;
+  padding: 13px 0;
+  transform: rotate(-1deg) scale(1.02);
+}
+
 .ticker-track {
   display: flex;
+  width: max-content;
+  animation: ticker 40s linear infinite;
+  will-change: transform;
+}
+
+.ticker-group {
+  display: flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
-  width: max-content;
-  animation: ticker 40s linear infinite;
+  padding-right: 30px;
+  white-space: nowrap;
   font: 700 11px var(--mono);
   letter-spacing: 3px;
-  will-change: transform;
 }
-.ticker-track b { color: var(--lime); font-size: 17px; }
+
+.ticker-group b {
+  color: var(--purple);
+  font-size: 17px;
+}
+
 @keyframes ticker {
   from {
     transform: translateX(0);
