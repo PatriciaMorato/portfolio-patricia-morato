@@ -71,22 +71,28 @@ a { color: inherit; }
   justify-content: flex-start;
   gap: 30px;
   width: max-content;
+  min-width: 200%;
   animation: ticker 40s linear infinite;
-  will-change: transform;
+  font: 700 11px var(--mono);
+  letter-spacing: 3px;
+  white-space: nowrap;
 }
 
-.ticker-group {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex: 0 0 auto;
-  gap: 30px;
-  padding-right: 30px;
-  white-space: nowrap;
+.ticker-track b {
+  color: var(--purple);
+  font-size: 17px;
+}
+
+.ticker-track span {
   font: 700 11px var(--mono);
   letter-spacing: 3px;
 }
 
+@keyframes ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
 .ticker-group b {
   color: var(--purple);
   font-size: 17px;
