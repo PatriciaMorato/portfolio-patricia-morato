@@ -253,18 +253,3 @@ h2 em { color: var(--pink); font-style: normal; }
   margin: 0;
   line-height: 1.7;
 }
-/* Velocidad de la cinta según dispositivo */
-.ticker-track {
-  animation-duration: 40s;
-}
-
-@media (max-width: 760px) {
-  .ticker-track {
-    animation-duration: 26s;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .ticker-track {
-    animation-duration: 40s !important;
-  }
-}
