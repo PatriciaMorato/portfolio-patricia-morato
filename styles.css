@@ -58,6 +58,7 @@ a { color: inherit; }
 .ticker-track {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 30px;
   width: max-content;
   animation: ticker 40s linear infinite;
@@ -66,7 +67,14 @@ a { color: inherit; }
   will-change: transform;
 }
 .ticker-track b { color: var(--lime); font-size: 17px; }
-@keyframes ticker { to { transform: translateX(-50%); } }
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 .section { padding: 115px 9vw; }
 .section-kicker { justify-content: flex-start; color: var(--lime); }
 .kicker-rule { height: 1px; width: 70px; background: rgba(180,237,67,.5); }
